@@ -5,7 +5,6 @@ namespace VATCheckUsingVIES
 {
     static class ServicesMethods
     {
-
         public static CheckVatResult CheckVat(string cc, string vatNum)
         {
             var client = new checkVatPortTypeClient();
@@ -17,6 +16,7 @@ namespace VATCheckUsingVIES
         public static ApproxResult CheckVatApprox(string countryCode, string vatNumber, string traderName, string traderCompanyType,
             string traderStreet, string traderPostcode, string traderCity, string requesterCountryCode, string requesterVatNumber, bool valid)
         {
+
             matchCode traderNameMatch;
             matchCode traderCompanyTypeMatch;
             matchCode traderStreetMatch;

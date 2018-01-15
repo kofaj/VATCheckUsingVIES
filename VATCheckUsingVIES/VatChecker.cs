@@ -41,6 +41,7 @@ namespace VATCheckUsingVIES
         #region CheckUserInput
         private void CheckButton_Click(object sender, EventArgs e)
         {
+            CheckButton.Enabled = false;
             ResultLabel.ResetText();
             string countryCode = ExtractCountryCodeFromInput();
             string VATCode = ExtractVatCodeFromInput();
@@ -53,11 +54,13 @@ namespace VATCheckUsingVIES
             {
                 ResultLabel.Text = MessageProvider.ErrorMessage();
             }
+            CheckButton.Enabled = true;
         }
 
         //Second button, only to launch CheckVatApprox
         private void CheckButton2_Click(object sender, EventArgs e)
         {
+            CheckButton2.Enabled = false;
             string countryCode = ExtractCountryCodeFromInput();
             string VATCode = ExtractVatCodeFromInput();
 
@@ -70,6 +73,8 @@ namespace VATCheckUsingVIES
             {
                 ResultLabel.Text = MessageProvider.ErrorMessage();
             }
+
+            CheckButton2.Enabled = true;
         }
 
         private bool VatIsFine()
@@ -262,7 +267,5 @@ namespace VATCheckUsingVIES
         public string RequesterVatNumber { get { return VatNumberBox.Text; } }
         public bool Valid { get; set; }
         #endregion Properties
-
     }
-
 }

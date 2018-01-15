@@ -96,6 +96,7 @@
             this.CheckButton2.TabIndex = 44;
             this.CheckButton2.Text = "Sprawdź";
             this.CheckButton2.UseVisualStyleBackColor = true;
+            this.CheckButton2.Click += new System.EventHandler(this.CheckButton2_Click);
             // 
             // label1
             // 
